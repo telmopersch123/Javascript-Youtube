@@ -1,0 +1,15 @@
+#objetos {
+    width: 100%;              /* Largura total da página */
+    height: 300px;            /* Altura definida */
+    background-color: #f4f4f4; /* Cor de fundo clara */
+    border: 2px solid #ccc;   /* Borda fina e cinza */
+    border-radius: 8px;       /* Cantos arredondados */
+    display: flex;            /* Habilita layout flexível */
+    justify-content: center;  /* Alinha itens horizontalmente ao centro */
+    align-items: center;      /* Alinha itens verticalmente ao centro */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    font-family: 'Arial', sans-serif; /* Fonte */
+    font-size: 16px;          /* Tamanho da fonte */
+    color: #333;              /* Cor do texto */
+    margin: 20px auto;        /* Margem para centralizar verticalmente */
+}

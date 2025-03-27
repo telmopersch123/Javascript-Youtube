@@ -1,0 +1,40 @@
+body{
+  background-color: rgba(0, 0, 0, 0.952);
+  color: white;
+  font-weight: bolder;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+  ;
+}
+main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.caixa{
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px
+}
+.cursoP {
+  padding: 10px
+}
+
+.curso{
+  background-color: rgb(119, 119, 119);
+  width: 100%;
+  border-radius: 3px;
+}
+
+.selecionado {
+  color: #000000;
+   background-color: rgb(107, 7, 7);
+}
+input,
+button{
+  padding: 30px;
+  font-weight: bolder;
+  font-size: 20px;
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <script src="script.js" defer></script>
+  <title>clock</title>
+</head>
+
+<body>
+  <main id="clockTot">
+    <div id="clockDiv"></div>
+    <h1 id="TitleAlarm">Programe seu Lembrete do Dia!</h1>
+    <div id="alarm">
+      <div class="div_Inputs">
+        <div class="ZerarDiv"><i class="bi bi-file-x"></i></div>
+        <input title="Horas" type="number" id="alarmH" placeholder="Horas" min="-1" max="23" readonly>
+        <div class="divIcons">
+          <i class="bi bi-caret-up-fill arrow"></i>
+          <i class="bi bi-caret-down-fill arrow"></i>
+        </div>
+      </div>
+      <div class="div_Inputs">
+        <div class="ZerarDiv"><i class="bi bi-file-x"></i></div>
+        <input title="Minutos" type="number" id="alarmM" placeholder="Minutos" min="-1" max="59" readonly>
+        <div class="divIcons">
+          <i class="bi bi-caret-up-fill arrow"></i>
+          <i class="bi bi-caret-down-fill arrow"></i>
+        </div>
+      </div>
+      <div class="div_Inputs">
+        <div class="ZerarDiv"><i class="bi bi-file-x"></i></div>
+        <input title="Segundos" type="number" id="alarmS" placeholder="Segundos" min="-1" max="59" readonly>
+        <div class="divIcons">
+          <i class="bi bi-caret-up-fill arrow"></i>
+          <i class="bi bi-caret-down-fill arrow"></i>
+        </div>
+      </div>
+    </div>
+    <button id="buttonAlarm">Alarmar</button>
+    <div id="DivAlarms">
+    </div>
+    <div id="addMusic">
+      <label onclick="clickInputEvent()" for="mp3Input">Clique para adicionar seu próprio alarme (mp3)</label>
+      <input type="file" id="mp3Input" accept=".mp3">
+    </div>
+  </main>
+
+  <footer>&copy;TelmoPersch</footer>
+</body>
+
+</html>

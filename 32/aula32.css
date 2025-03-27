@@ -1,0 +1,109 @@
+:root{
+  --number: 70px;
+}
+
+
+
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: Arial, sans-serif;
+  background-color: rgba(0, 0, 0, 0.795);
+}
+
+
+
+
+#divCalc{
+  background-color: rgba(19, 19, 19, 0.747) !important;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.288) !important;
+   width: 300px;
+   border-radius: 10px;
+   display: flex;
+   flex-direction: column;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -75%);
+}
+
+.divCalcDesligada{
+  width: 300px;
+   background-color: rgba(70, 70, 70, 0.377) !important;
+   border-radius: 10px;
+   display: flex;
+   flex-direction: column;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -75%);
+   
+}
+.divCalcDesligada > div > p:not(:first-child),
+.divCalcDesligada > input{
+  pointer-events: none;
+  background-color: rgba(70, 70, 70, 0.377) !important;
+}
+
+.LIGAR{
+  background-color: rgba(253, 141, 141, 0.493) !important;
+}
+input{
+  width: 100%;
+  border: none;
+  height: 50px;
+  padding: 10px;
+  border-radius: 10px 10px 0px 0px;
+  text-align: right;
+  font-weight: bolder;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 24px;
+}
+  input:disabled {
+    background-color: #f0f0f0;
+    color: #000000;
+    cursor: not-allowed;
+  }
+
+#DivNumbersOper{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+#DivNumbersOper > p{
+  width: calc(var(--number) + 5px);
+  height: var(--number);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(66, 64, 64);
+  cursor: pointer;
+  font-weight: bold;
+}
+
+
+
+
+#DivNumbersOper > p:hover{
+  background-color: rgb(83, 83, 83);
+}
+.opers{
+  background-color: rgba(153, 153, 153, 0.493) !important;
+}
+.opers:hover{
+  background-color: rgba(153, 153, 153, 0.596) !important;
+}
+.clean{
+ background-color: rgba(220, 255, 196, 0.459) !important;
+}
+.result{
+  background-color: rgba(196, 253, 255, 0.459) !important;
+}

@@ -1,0 +1,43 @@
+/* Estilos gerais */
+body {
+  font-family: sans-serif;
+  margin: 20px;
+  background-color: black;
+}
+
+/* Estilos para as caixas */
+.caixa {
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.verde {
+  background-color: lightgreen;
+}
+
+.azul {
+  background-color: lightblue;
+}
+
+.vermelho {
+  background-color: lightpink;
+}
+
+/* Estilos para o botão */
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+/* Estilos para o input */
+input[type="text"] {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}

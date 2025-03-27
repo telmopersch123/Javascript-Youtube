@@ -1,0 +1,487 @@
+* {
+  user-select: none;
+}
+body {
+      background-color: #000000cc;
+      color: white;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+main{
+display: flex;
+flex-direction: column;
+margin: auto;
+text-align: center;
+gap: 30px;
+width: 90%;
+}
+button {
+   pointer-events: auto; 
+}
+#buttonAlarm {
+
+  background-color: #0078D7; /* Azul primário */
+  color: white; /* Texto branco */
+  font-size: 18px; /* Tamanho da fonte */
+  font-weight: bold; /* Texto em negrito */
+  padding: 15px 30px; /* Espaçamento interno */
+  border: none; /* Remove bordas */
+  border-radius: 10px; /* Bordas arredondadas */
+  cursor: pointer; /* Mostra o cursor de clique */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra leve */
+  transition: all 0.3s ease; /* Transição suave */
+  width: 50%;
+  margin: auto;
+  margin-top: 50px;
+}
+
+#buttonAlarm:hover {
+  background-color: #005BB5; /* Azul mais escuro no hover */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3); /* Sombra mais intensa no hover */
+  transform: translateY(-2px); /* Efeito de elevação no hover */
+}
+
+#buttonAlarm:active {
+  background-color: #003F87; /* Azul ainda mais escuro no clique */
+  transform: translateY(0); /* Remove elevação no clique */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Restaura a sombra original */
+}
+#TitleAlarm{
+  color: rgba(255, 255, 255, 0.411);
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  margin-bottom: 50px;
+}
+#alarm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px; /* Espaçamento entre os inputs */
+  margin-top: -50px;
+  flex-wrap: wrap;
+}
+
+
+#alarm input {
+  width: 300px;
+  height: 80px;
+  font-size: 20px;
+  text-align: center;
+  font-weight: bolder;
+  font-size: 32px;
+  border: 2px solid #333;
+  border-radius: 10px;
+  background-color: #f0f0f02c;
+  color: #1d1d1d;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+#alarm input:focus {
+  border-color: #0078D7;
+  box-shadow: 0 0 10px rgba(0, 120, 215, 0.5);
+  background-color: #f8f8f87c;
+}
+
+#alarm input::placeholder {
+  color: #888;
+  font-style: italic;
+}
+#alarm input:focus::placeholder {
+  color: #00000081;
+}
+
+
+#alarm input:hover {
+  border-color: #555;
+  background-color: #f8f8f844;
+}
+#clockDiv{
+  font-size: 10vw;
+  font-weight: bold;
+  color: #f1f1f185;
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  letter-spacing: 5px;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 20px 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  width: auto;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-top: 50px;
+}
+
+#DivAlarms{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  background-color: rgba(0, 0, 0, 0.205);
+  border-radius: 10px;
+  padding: 5px;
+  gap: 10px;
+}
+.divAlarms{
+  color: rgba(255, 255, 255, 0.76);
+  font-weight: bolder;
+}
+.titleAlarm{
+  margin: 0;
+  color: rgba(167, 167, 167, 0.452)
+}
+.container{
+  position: relative;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.205);
+  padding: 5px;
+   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    opacity: 0;
+  transform: scale(0.5); /* Começa menor */
+  animation: surgir 0.5s ease-out forwards; /* Animação ao carregar */
+}
+@keyframes surgir {
+  0% {
+    opacity: 0; /* Começa invisível */
+    transform: translateY(50px); /* Começa 50px abaixo */
+  }
+  70% {
+    opacity: 1; /* Já visível */
+    transform: translateY(-10px); /* Passa ligeiramente o ponto final */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* Posição final */
+  }
+}
+.desaparecer { animation: desaparecer 0.2s forwards;} /* Aplica a animação com duração de 2 segundos */
+@keyframes desaparecer {
+  0% {
+    opacity: 1; /* Totalmente visível */
+    transform: translateY(0) scale(1); /* Posição e tamanho originais */
+  }
+  100% {
+    opacity: 0; /* Transparente */
+    transform: translateY(-50px) scale(0.5); /* Move para cima e reduz o tamanho */
+  }
+}
+span:not(:first-child)::before {
+  content: ":";
+}
+
+
+
+.buttonX{
+  width: 100%;
+  border-radius: 10px;
+  border: none;
+  background-color: rgba(252, 137, 137, 0.082);
+  padding: 10px;
+  color: white;
+  font-weight: bolder;
+  cursor: pointer;
+  display: none;
+}
+
+.buttonX:hover{
+  background-color: rgba(252, 137, 137, 0.158);
+}
+.buttonXGeral{
+  position: absolute;
+  right: 0;
+  margin-right: 5px;
+  top: 50%;
+  transform: translateY(-45%);
+  border-radius:5px;
+  border: 0;
+  width: 35px;
+  height: 35px;
+    background-color: rgba(170, 170, 170, 0.205);
+    color: rgba(255, 255, 255, 0.267);
+    font-weight: bolder;
+    font-size: 16px;
+    text-align: center;  
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    cursor: pointer;
+}
+.buttonXGeral:hover{
+   background-color: #0078D7;
+   color: rgba(255, 255, 255, 0.651);
+}
+
+
+#activeAlarms{
+  background-color: rgba(255, 0, 0, 0.103);
+  animation: pulse 1s infinite; 
+  opacity: 1;
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1); /* Tamanho inicial */
+  }
+  50% {
+    transform: scale(0.9); /* Reduz para 80% do tamanho */
+  }
+  100% {
+    transform: scale(1); /* Volta ao tamanho original */
+  }
+}
+
+.alerta {
+  position: fixed;
+  top: -100px;
+  right: 20px;
+  background-color: #f8d7da;
+  color: #d72b00;
+  padding: 15px;
+  border: 1px solid #f5c6cb;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 300px;
+  z-index: 1000;
+  font-weight: bolder;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+   animation: entrarDeCima 0.5s ease-out forwards;
+}
+@media screen and (max-width: 400px){
+  .alerta{
+  position: fixed;
+  top: 0; 
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  transform: translateY(0%); 
+  width: 70%
+  }
+}
+@keyframes entrarDeCima {
+  0% {
+    top: -100px; /* Começa fora da tela acima */
+  }
+  50% {
+    top: 50px; /* Começa fora da tela acima */
+  }
+  100% {
+    top: 20px; /* Finaliza na posição desejada */
+  }
+}
+.sumirParacima{
+  animation: subirParaCima 0.5s ease-out forwards;
+}
+@keyframes subirParaCima {
+  0% {
+    top: 20px; /* Começa fora da tela acima */
+  }
+  100% {
+    top: -100px; /* Finaliza na posição desejada */
+  }
+}
+
+/* Estilo do botão de fechar */
+.fechar {
+  background: none;
+  border: none;
+  color: #d72b00;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+
+/* Adiciona efeito ao passar o mouse no botão de fechar */
+.fechar:hover {
+  color: #f5c6cb;
+}
+
+footer{
+  position: fixed; 
+  bottom:0;
+  right: 0;
+}
+    
+
+#addMusic {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f7f7f73d;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 30%;
+  margin: 20px auto;
+}
+
+#addMusic label {
+   
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+  padding: 10px;
+  border: 2px dashed #ccc;
+  border-radius: 5px;
+  transition: border-color 0.3s ease;
+  width: 100%;
+  display: block;
+}
+
+#addMusic label:hover {
+  border-color: #008CBA; /* Muda a borda quando passa o mouse */
+}
+
+#addMusic label:active {
+  background-color: #e1f5fe; /* Muda o fundo ao clicar */
+}
+
+#mp3Input {
+  display: none; /* Esconde o botão real de arquivo */
+}
+
+.pMusic{
+font-weight: bold;
+font-family: cursive;
+color: rgba(255, 255, 255, 0.616);
+}
+.divMusic{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: #5555558a;
+  width: 105%;
+  border-radius: 10px;
+  transition: .2s linear;
+}
+.divMusic:hover{
+  background-color: #3333338a;
+}
+
+.bi-trash3{
+  position: absolute;
+  right: 0;
+  margin-right: 18px;
+  background-color: #555;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.bi:hover{
+    background-color: #0078D7;
+}
+  @media screen and (max-width: 940px){
+.divMusic{
+  display: flex;
+  flex-direction: column-reverse;
+}
+.bi-trash3{
+  position: relative;
+  margin-right: 0;
+  width: 100%;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.308);
+}
+}  
+.div_Inputs{
+display: flex;
+position: relative;
+}
+.ZerarDiv{
+position: absolute;
+margin-left: 2px;
+font-size: 40px;
+background-color: rgba(255, 255, 255, 0.445);
+height: 92%;
+border-radius: 10px 0px 0px 10px;
+display: flex;
+align-items: center;
+  top: 50%; /* Move o elemento para o meio do contêiner */
+  transform: translateY(-50%); /* Ajusta para centralizar exatamente o elemento */
+
+}
+.bi-file-x{
+  background-color: #888;
+  padding: 3px;
+  margin: 2px;
+  border-radius: 10px;
+    cursor: pointer;
+}
+.bi-file-x:hover{
+  background-color: rgb(122, 122, 122);
+}
+.bi-file-x:active{
+  color: #0078D7;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.712);
+}
+.divIcons{
+position:absolute;
+right: 0;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+border-radius: 0px 8px 8px 0px;
+background-color: rgba(255, 255, 255, 0.445);
+height: 92%;
+margin-right: 2px;
+cursor: pointer;
+
+
+  top: 50%; /* Move o elemento para o meio do contêiner */
+  transform: translateY(-50%); /* Ajusta para centralizar exatamente o elemento */
+
+}
+.arrow{
+font-size: 25px;
+width: 60px;
+
+}
+.arrow:hover{
+  background-color: transparent !important;
+  color: #0078D7;
+   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.712);
+}
+.bi-caret-up-fill:active{
+ background-color: rgba(0, 0, 0, 0.356) !important;
+ border-radius: 0px 8px 0px 0px;
+  height: 100%;
+  margin-bottom: 20px;
+}
+.bi-caret-down-fill:active{
+  background-color: rgba(0, 0, 0, 0.356) !important;
+  border-radius: 0px 0px 8px 0px;
+  height: 100%;
+  margin-top: 20px;
+}
+.div_Inputs input:hover ~ .divIcons .arrow {
+  color: #555; /* Escolha a cor desejada */
+}
+
+
+/* Remove as setas do input para navegadores como Chrome e Edge */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Remove as setas para o Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+
+
+

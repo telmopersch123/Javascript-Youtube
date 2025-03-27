@@ -1,0 +1,73 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Corpo da página */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+}
+
+/* Cabeçalho */
+h1 {
+  font-size: 2.5rem;
+  color: #4CAF50;
+  margin-bottom: 10px;
+}
+
+/* Subtítulos */
+h4 {
+  font-size: 1.25rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+/* Botões */
+button {
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-size: 1rem;
+  margin: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  width: 200px;
+}
+
+/* Efeito de hover e clique nos botões */
+button:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+button:active {
+  background-color: #388e3c;
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h4 {
+    font-size: 1rem;
+  }
+
+  button {
+    width: 150px;
+    font-size: 0.9rem;
+  }
+}

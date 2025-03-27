@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "produto": "Smartphone",
+    "marca": "Samsung",
+    "modelo": "Galaxy S23"
+  },
+  {
+    "id": 2,
+    "produto": "Notebook",
+    "marca": "Dell",
+    "modelo": "Inspiron 15"
+  },
+  {
+    "id": 3,
+    "produto": "Tablet",
+    "marca": "Apple",
+    "modelo": "iPad Pro"
+  },
+  {
+    "id": 4,
+    "produto": "Fone de Ouvido",
+    "marca": "Sony",
+    "modelo": "WH-1000XM5"
+  },
+  {
+    "id": 5,
+    "produto": "Smartwatch",
+    "marca": "Garmin",
+    "modelo": "Fenix 7"
+  }
+]

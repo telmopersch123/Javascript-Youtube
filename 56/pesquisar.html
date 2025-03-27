@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="pesquisar.js" type="module" defer></script>
+</head>
+
+<body>
+  <div id="pesquisa">
+    <div>
+      <div class="campoPesq">
+        <input type="radio" id="id" name="pesquisa" value="id">
+        <label for="id">ID</label>
+      </div>
+      <div class="campoPesq">
+        <input type="radio" id="nome" name="pesquisa" value="nome">
+        <label for="nome">Nome</label>
+      </div>
+      <div class="campoPesq">
+        <input type="radio" id="dataNascimento" name="pesquisa" value="dataNascimento">
+        <label for="dataNascimento">Data de Nascimento</label>
+      </div>
+      <div class="campoPesq">
+        <input type="radio" id="email" name="pesquisa" value="email">
+        <label for="email">Email</label>
+      </div>
+      <div class="campoPesq">
+        <label for="pesquisar">Pesquisar</label>
+        <input type="text" id="pesquisar" name="pesquisa" placeholder="Digite sua pesquisa...">
+      </div>
+      <div class="campoPesq">
+        <button id="btn_pesq">Pesquisar</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="resultado" class="resultado">
+    <div id="titulos" class="titulos">
+      <div class="titulo c1">id</div>
+      <div class="titulo c2">nome</div>
+      <div class="titulo c3">celular</div>
+      <div class="titulo c4">email</div>
+      <div class="titulo c5">data</div>
+    </div>
+    <div id="dados" class="dados">
+      <div class="linhadados">
+        <div class="coluna c1">id</div>
+        <div class="coluna c2">nome</div>
+        <div class="coluna c3">celular</div>
+        <div class="coluna c4">email</div>
+        <div class="coluna c5">data</div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

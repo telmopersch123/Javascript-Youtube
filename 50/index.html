@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário</title>
+  <!-- CDC CHARTJS CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div style="width: 500px; height: 500px">
+    <canvas id="grafico1" style="width: 500px; height: 500px">oi</canvas>
+  </div>
+  <script>
+    const ctx = document.getElementById('grafico1');
+    let valoresX = ["Brasil", "Bolivia", "El Salvador"]
+    let labelsx = [0, 20, 30]
+    new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: valoresX,
+        datasets: [{
+          label: '# of Votes',
+          data: [12, 19, 3, 5, 2, 3],
+          borderWidth: 1
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+  </script>
+</body>
+
+</html>

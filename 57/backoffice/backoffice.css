@@ -1,0 +1,168 @@
+body{
+  background-color: #333 !important;
+}
+.menuprincipal {
+  z-index: 1;
+  position: fixed;
+  top: 0px;
+  left: -250px;
+  width: 250px;
+  height: 100vh;
+  background-color: #333;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
+  transition: left 0.7s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+#btn_menuPrincipal {
+  position: absolute;
+  top: 4px;
+  left: 260px;
+  background: #333;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 7px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.774);
+  transition: left 0.3s ease-in-out;
+}
+
+.menu_aberto {
+  left: 0 !important;
+}
+
+#btn_menuPrincipal:hover {
+  color: var(paleta-Prim);
+}
+
+.menuprincipal.hidden + #btn_menuPrincipal {
+  left: 10px;
+}
+
+#btn_menuItem {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.btn_menuItem {
+  background-color: var(--paleta-Prim);
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: left;
+  width: 100%;
+  transition: background 0.3s;
+}
+
+.btn_menuItem:hover {
+  background-color: var(--paleta-Seg);
+}
+
+.topo {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  flex-wrap: wrap;
+  z-index: 0;
+}
+
+#logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+#config {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: normal;
+  color: var(--paleta-Prim);
+}
+
+#config:hover {
+  color: var(--paleta-Seg);
+}
+
+@media (max-width: 768px) {
+  .menuprincipal {
+    left: -200px;
+    width: 200px;
+  }
+
+  #btn_menuPrincipal {
+    left: 210px;
+    font-size: 20px;
+  }
+
+  .topo {
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 10px;
+  }
+
+  #logo {
+    font-size: 22px;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  #config {
+    font-size: 14px;
+  }
+
+  .btn_menuItem {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .menuprincipal {
+    left: -150px;
+    width: 150px;
+  }
+
+  #btn_menuPrincipal {
+    left: 160px;
+    font-size: 18px;
+  }
+
+  .topo {
+    flex-direction: column;
+    padding: 8px;
+  }
+
+  #logo {
+    font-size: 18px;
+  }
+
+  #config {
+    font-size: 12px;
+  }
+
+  .btn_menuItem {
+    font-size: 12px;
+    padding: 8px;
+  }
+}

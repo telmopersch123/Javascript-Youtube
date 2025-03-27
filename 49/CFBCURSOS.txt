@@ -1,0 +1,8 @@
+{
+  "name":"Telmo Ferreira",
+  "age": 25,
+  "address": {
+    "street": "Rua da Paz",
+    "number": 123
+    }
+}

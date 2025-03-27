@@ -1,0 +1,462 @@
+*{
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+/* Estilos gerais */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f4f4f4;
+}
+#DivGeral{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+}
+
+header, nav, main {
+  padding: 15px;
+}
+
+/* Estilos do cabeçalho */
+header.cabecalho {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Estilos do menu */
+nav.menu {
+  background-color: #007bff;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  position: relative;
+}
+
+nav.menu button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+ nav.menu button:hover {
+  background-color: #0056b3;
+} 
+
+/* Estilos do conteúdo principal */
+main.principal {
+  padding: 20px;
+  background-color: #ffffff;
+  min-height: 400px;
+}
+
+main.principal iframe {
+  width: 100%;
+  height: 50vh;
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.abaSelecionada {
+  background-color: #ff9100 !important;
+  color: white;
+  border-color: #0056b3;
+  font-weight: bold;
+}
+
+/* CSS NOVO */
+
+/* Container do formulário */
+.elementosForm {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+}
+
+/* Estilos dos campos do formulário */
+.campoForm {
+  margin-bottom: 15px;
+}
+
+.campoForm label {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.campoForm input {
+  width: 100%;
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+/* Foco nos campos de entrada */
+.campoForm input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Estilos dos botões */
+.botoesForm {
+  text-align: center;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.botoesForm button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  width: 45%; /* Definindo os botões com largura igual */
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+/* Estilo para o botão "Gravar" */
+.gravar {
+  background-color: #28a745; /* Cor verde */
+  color: white;
+  border: none;
+}
+
+.gravar:hover {
+  background-color: #218838; /* Cor verde escuro */
+  transform: scale(1.05); /* Efeito de aumento no hover */
+}
+
+/* Estilo para o botão "Cancelar" */
+.cancelar {
+  background-color: #dc3545; /* Cor vermelha */
+  color: white;
+  border: none;
+}
+
+.cancelar:hover {
+  background-color: #c82333; /* Cor vermelha escura */
+  transform: scale(1.05); /* Efeito de aumento no hover */
+}
+/*PESQUISAR CSS*/
+/* Estilo Geral */
+/* Container Principal */
+#pesquisa {
+  background-color: #ffffff;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-bottom: 30px;
+  margin-top: 50px;
+}
+
+/* Estilo das Divs Filhas */
+.campoPesq {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Inputs e Labels */
+label {
+  font-size: 14px;
+  color: #333;
+  cursor: pointer;
+}
+
+input[type="radio"] {
+  margin-right: 10px;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+/* Botão */
+#btn_pesq {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#btn_pesq:hover {
+  background-color: #45a049;
+}
+
+/* Hover para Divs */
+.campoPesq:hover {
+  background-color: #f9f9f9;
+  border-radius: 4px;
+}
+
+/* Container Principal */
+#resultado {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  background-color: #ffffff;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+}
+
+/* Títulos */
+#titulos {
+  display: flex;
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-bottom: 2px solid #ddd;
+}
+
+#titulos .titulo {
+  flex: 1;
+  text-align: center;
+  font-weight: bold;
+  font-size: 14px;
+  color: #333;
+  text-transform: uppercase;
+}
+
+/* Linhas de Dados */
+#dados {
+  display: flex;
+  flex-direction: column;
+}
+
+.linhadados {
+  display: flex;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  align-items: center;
+  background-color: #ffffff;
+}
+
+.linhadados:last-child {
+  border-bottom: none;
+}
+
+/* Colunas */
+.coluna {
+  flex: 1;
+  text-align: center;
+  font-size: 14px;
+  color: #555;
+}
+
+/* Colunas específicas */
+.c1 { font-weight: bold; }
+.c2 { color: #007BFF; }
+.c3 { font-style: italic; }
+.c4 { text-transform: lowercase; }
+.c5 { color: #28a745; }
+
+/*gestão*/
+.iconeop{
+ font-size: 150%;
+ margin: 8px;
+ background-color: #55555525;
+ padding: 5px;
+ border-radius: 50px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ cursor: pointer;
+}
+
+.iconeop:hover{
+   background-color: #55555533;
+}
+
+.fundopopup {
+  display: none; /* Começa escondido */
+}
+
+.fundopopup.ativo {
+  display: flex; /* Ativa quando a classe "ativo" é adicionada */
+}
+
+/*JANELA POP UP GESTÃO*/
+/* Fundo escuro semi-transparente */
+.fundopopup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  flex-direction: column;
+}
+
+/* Janela do popup */
+.janelapopup {
+  background: white;
+  width: 350px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Título do popup */
+.titulopopup {
+  background: #007bff;
+  color: white;
+  padding: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Corpo do popup */
+.principalpopup {
+  padding: 20px;
+  font-size: 16px;
+  color: #333;
+  text-align: center;
+}
+
+/* Rodapé com botões */
+.rodapepopup {
+  display: flex;
+  justify-content: space-around;
+  padding: 15px;
+  background: #f1f1f1;
+  border-top: 1px solid #ddd;
+  width: auto;
+}
+
+/* Botões */
+.btn_geral {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.btn_geral:first-child {
+  background: #28a745;
+  color: white;
+}
+
+.btn_geral:first-child:hover {
+  background: #218838;
+}
+
+.btn_geral:last-child {
+  background: #dc3545;
+  color: white;
+}
+
+.btn_geral:last-child:hover {
+  background: #c82333;
+}
+
+/* Animação de entrada */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/*FILTRO*/
+#filtro {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #f8f9fa;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: fit-content;
+  justify-content: center;
+  margin: auto;
+}
+
+#campoForm {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+#campoForm input {
+  padding: 8px 12px;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  outline: none;
+  transition: border 0.3s;
+}
+
+#campoForm input:focus {
+  border-color: #007bff;
+}
+
+#btnFiltrar {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#btnFiltrar:hover {
+  background-color: #0056b3;
+}
+
+.bi-search {
+  font-size: 20px;
+  color: #007bff;
+  cursor: pointer;
+}
+

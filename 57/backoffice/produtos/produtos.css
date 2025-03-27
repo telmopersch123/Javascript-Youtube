@@ -1,0 +1,485 @@
+
+.topoJanela {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--paleta-Prim);
+  color: white;
+  padding: 10px 20px;
+  width: 100%;
+  height: 60px;
+}
+
+.topoJanela div:nth-child(1) {
+  flex: 1;
+}
+
+.topoJanela div:nth-child(2) {
+  flex: 2;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.topoJanela div:nth-child(3) {
+  flex: 1;
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.topoJanela button {
+  background: var(--paleta-Seg);
+  border: none;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s;
+  padding: 10px 14px;
+  border-radius: 100px;
+}
+.iconscol{
+  font-size: 20px;
+}
+.topoJanela button:nth-child(1):hover{
+color: rgb(18, 184, 18);
+}
+.topoJanela button:nth-child(2):hover{
+color: rgb(184, 18, 18);
+}
+.topoJanela button:nth-child(3):hover{
+color: rgb(18, 165, 184);
+}
+
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .topoJanela {
+    flex-direction: column;
+    height: auto;
+    padding: 15px;
+  }
+
+  .topoJanela div:nth-child(2) {
+    font-size: 16px;
+    margin: 5px 0;
+  }
+
+  .topoJanela div:nth-child(3) {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .topoJanela div:nth-child(3) {
+    gap: 5px;
+  }
+
+  .topoJanela button {
+    font-size: 16px;
+  }
+}
+
+
+/* popup */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 101vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+.JanelaPopup {
+  background: white;
+  width: 40%;
+  max-width: 600px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.tituloPopup {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--paleta-Seg);
+  border-bottom: 2px solid var(--paleta-Prim);
+  padding-bottom: 10px;
+}
+
+.tituloPopup p {
+  margin: 0;
+}
+
+.btn_janelaopera {
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: var(--paleta-Prim);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn_janelaopera:hover {
+  color: var(--paleta-Seg);
+}
+
+.corpooPopup {
+  padding: 20px 0;
+  font-size: 16px;
+}
+
+.rodapeoPopup {
+  text-align: right;
+  padding-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 5%;
+
+  flex-wrap: wrap;
+}
+.btn_comandoPopup {
+  background-color: var(--paleta-Prim);
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+  margin: 5px;
+}
+
+.btn_comandoPopup:hover {
+  background-color: var(--paleta-Seg);
+}
+
+#btn_gcancelar {
+  background-color: #ccc;
+  color: #333;
+}
+
+#btn_gcancelar:hover {
+  background-color: #bbb;
+}
+.campoForm {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.campoForm label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.campoForm input,
+.campoForm select {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  width: 100%;
+}
+
+.campoForm select {
+  appearance: none;
+  background: #fff url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18"><path fill="%23333" d="M7 10l5 5 5-5z"/></svg>') no-repeat right 10px center;
+  background-size: 18px;
+  padding-right: 30px;
+}
+
+.campoForm input:focus,
+.campoForm select:focus {
+  outline: none;
+  border-color: var(--paleta-Prim);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+.campoForm {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.campoForm label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.campoForm input,
+.campoForm select {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  width: 100%;
+}
+
+.campoForm select {
+  appearance: none;
+  background: #fff url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18"><path fill="%23333" d="M7 10l5 5 5-5z"/></svg>') no-repeat right 10px center;
+  background-size: 18px;
+  padding-right: 30px;
+}
+
+.campoForm input:focus,
+.campoForm select:focus {
+  outline: none;
+  border-color: var(--paleta-Prim);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .JanelaPopup {
+    width: 70%;
+    padding: 15px;
+  }
+
+  .tituloPopup {
+    font-size: 16px;
+  }
+
+  .corpooPopup {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .JanelaPopup {
+    width: 90%;
+  }
+
+  .btn_janelaopera {
+    font-size: 18px;
+  }
+}
+
+/* Animação de entrada */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+#telefones {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-weight: bold;
+}
+
+.tel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--paleta-Prim);
+  color: #fff;
+  border-radius: 5px;
+  font-size: 20px;
+  padding: 5px !important;
+  width: 101px;
+}
+
+.numTel {
+  flex-grow: 1;
+}
+
+.delTel {
+  cursor: pointer;
+  color: #fff;
+  font-size: 18px;
+  transition: color 0.3s;
+  margin-left: 10px; /* Ajusta o espaçamento entre o número e o ícone */
+}
+
+.delTel:hover {
+  color: #ff4d4d;
+}
+.bi-trash{
+cursor: pointer;
+}
+.bi-toggle{
+  color: rgb(83, 83, 83);
+  background-color: rgba(0, 0, 0, 0) !important;
+  padding: 0 !important;
+  margin: 0;
+  font-size: 30px;
+  cursor: pointer;
+  height: auto; 
+}
+.bi-operacao{
+  font-size: 30px;
+  cursor: pointer;
+  background-color:rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  border-radius: 20px;
+  transition: 0.2 ease-in;
+  display: flex;
+  align-items: center;
+  margin: 5px;
+}
+.bi-operacao:hover{
+  background-color:rgba(0, 0, 0, 0.2);
+}
+.operacao{
+  display: flex;
+  gap: 5px;
+  justify-content: space-around !important;
+  align-items: center;
+}
+.textToggle{
+  display: flex; 
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (max-width: 900px){
+  .bi-operacao,
+  .bi-toggle{
+    font-size: 20px !important;
+  }
+}
+@media (max-width: 768px) {
+  .campoForm input {
+    font-size: 14px;
+    padding: 8px;
+  }
+  .tel {
+    font-size: 13px;
+    padding: 6px 10px;
+  }
+
+  .delTel {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .bi-operacao,
+  .bi-toggle{
+    font-size: 5vw !important;
+    padding: 1vw;
+  }
+  .tel {
+    flex-direction: row;
+    align-items: center;
+    gap: 10px; /* Ajusta o espaço entre número e ícone em telas pequenas */
+  }
+
+  .delTel {
+    font-size: 16px;
+  }
+}
+
+.img_foto{
+  width: 75px;
+  height: 100px;
+  border: 1px solid #fff;
+  border-radius: 5px;
+}
+
+.campoForm2{
+  display: flex;
+  align-items: center;
+}
+
+.filtragem {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #ddd;
+}
+
+.campofiltragem {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 300px;
+}
+
+.campofiltragem label {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.campoForm input {
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .filtragem {
+    justify-content: flex-start;
+    padding: 15px;
+  }
+
+  .campofiltragem {
+    max-width: 400px;
+  }
+}
+
+
+.ocultarpopupadd{
+  display: none !important;
+}
+.ocultarpopuppesq{
+  display: none !important;
+}
+
+
+.gridProdutos{
+  display: grid;
+  grid-template-columns: repeat(6, 1fr) !important;
+  font-size: 1vw !important;
+}
+.colunaElementosGrid{
+  font-size: 0.8vw !important;
+}
+.tituloGrid {
+  display: flex;
+}
+
+@media (max-width: 800px){
+  .gridProdutos{
+  display: grid;
+  grid-template-columns: repeat(6, 1fr) !important;
+  font-size: 1.5vw !important;
+}
+}
+@media (max-width: 500px){
+  .gridProdutos{
+  display: grid;
+  grid-template-columns: repeat(6, 1fr) !important;
+  font-size: 2vw !important;
+  gap: 0 !important;
+  margin: 2px !important;
+}
+.colunaElementosGrid{
+  font-size: 0.5vw !important;
+  padding: 0  !important;
+}
+}

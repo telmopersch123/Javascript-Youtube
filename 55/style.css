@@ -1,0 +1,134 @@
+/* Reseta os estilos padrão */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f5f5f5;
+}
+
+/* Estiliza o contêiner geral */
+.dataGridView_Products {
+  display: grid;
+  grid-template-rows: auto auto; /* Títulos e dados em linhas separadas */
+  width: 100%;
+  max-width: 1300px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  overflow: hidden; /* Esconde elementos que escapam */
+  box-sizing: border-box; /* Inclui padding e bordas no tamanho total */
+  margin: 0px 30px;
+}
+
+.dgvTitles {
+  display: grid;
+  grid-template-columns: 6% 19.5% 19.5% 19.5% auto; 
+  text-align: center;
+  background-color: #4CAF50;
+  color: #fff;
+  font-weight: bold;
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Estiliza os dados */
+.dgvGiven {
+  display: flex;
+  padding: 10px 0;
+  flex-direction: column;
+}
+.dgvGiven:nth-child(odd) {
+  background-color: #f9f9f9;
+}
+
+.dgvGiven:nth-child(even) {
+  background-color: #e9e9e9;
+}
+
+/* Adiciona um hover nas linhas de dados */
+.dgvGiven:hover {
+  background-color: #d5f5d5;
+  cursor: pointer;
+}
+
+/* Adiciona espaçamento interno */
+.dgvTitles div, 
+.dgvGiven div {
+  padding: 8px;
+  border-right: 1px solid #ddd;
+  display: grid;
+  grid-template-columns: 5% 20% 20% 20% auto; /* Ajuste conforme necessário */
+  text-align: center;
+}
+
+.dgvTitles div:last-child,
+.dgvGiven div:last-child {
+  border-right: none;
+}
+.Divicones{
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin-left: 8px;
+}
+.Divicones>p{
+padding: 10%;
+border-radius: 10px;
+background-color: #ccc;
+margin: 0px 3px;
+}
+.Divicones>p:hover{
+  background-color: #7a7a7a;
+}
+
+@media (max-width: 768px) {
+  .dataGridView_Products {
+    width: 95%; 
+  }
+
+  .dgvTitles div, 
+  .dgvGiven div {
+    flex: 1 1 18%; 
+    padding: 12px;
+    text-align: left;
+    border: none;
+    display: block; /* Cada elemento em uma nova linha */
+  width: 100%; /* Ocupa todo o espaço disponível */
+  box-sizing: border-box; /* Inclui padding e borda no cálculo do tamanho */
+  
+  /* Ajuste para texto fluido */
+  white-space: normal; /* Permite quebra de linha automática */
+  word-wrap: break-word; /* Quebra palavras muito longas */
+  overflow-wrap: anywhere; /* Quebra palavras longas mesmo no meio, se necessário */
+  
+  padding: 5px; /* Espaçamento interno para conforto visual */
+  font-size: 1rem; /* Tamanho de fonte padrão */
+  line-height: 1.4; /* Altura entre linhas */
+  }
+
+
+  .dgvGiven:nth-child(odd) {
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .dgvGiven:nth-child(even) {
+    background-color: #e9e9e9;
+  }
+   .Divicones{
+    justify-content: space-between;
+      margin-left: 0px;
+  }  
+}
+

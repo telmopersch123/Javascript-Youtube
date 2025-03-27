@@ -1,0 +1,39 @@
+#objetos {
+    width: 100%;              /* Largura total da página */
+    height: 300px;            /* Altura definida */
+    background-color: #f4f4f4; /* Cor de fundo clara */
+    border: 2px solid #ccc;   /* Borda fina e cinza */
+    border-radius: 8px;       /* Cantos arredondados */
+    display: flex;            /* Habilita layout flexível */
+    justify-content: center;  /* Alinha itens horizontalmente ao centro */
+    align-items: center;      /* Alinha itens verticalmente ao centro */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    font-family: 'Arial', sans-serif; /* Fonte */
+    font-size: 16px;          /* Tamanho da fonte */
+    color: #333;              /* Cor do texto */
+    margin: 20px auto;        /* Margem para centralizar verticalmente */
+}
+.computador {
+    width: 200px;              /* Largura de cada div */
+    height: 150px;             /* Altura de cada div */
+    background-color: #007BFF; /* Cor de fundo azul */
+    color: white;              /* Cor do texto */
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;        /* Cantos arredondados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para destacar */
+    margin: 10px;              /* Espaçamento entre divs */
+    padding: 10px;             /* Espaçamento interno */
+    display: flex;             /* Flexbox para centralizar conteúdo */
+    justify-content: center;   /* Centraliza horizontalmente */
+    align-items: center;       /* Centraliza verticalmente */
+    text-align: center;        /* Centraliza texto */
+    transition: transform 0.3s, background-color 0.3s; /* Animação suave */
+}
+
+.computador:hover {
+    background-color: #0056b3; /* Muda a cor ao passar o mouse */
+    transform: scale(1.05);    /* Aumenta ligeiramente o tamanho */
+    cursor: pointer;          /* Altera o cursor para um ponteiro */
+}

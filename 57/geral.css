@@ -1,0 +1,474 @@
+:root {
+  --paleta-Prim: #f0a500;
+  --paleta-Seg: #d18b00;
+  --paleta-Fundo: rgba(0, 0, 0, 0.6);
+  --paleta-Branco: #fff;
+  --paleta-Cinza: #444;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+input{
+  border-radius: 10px !important;
+}
+a {
+  text-decoration: none !important;
+  color: inherit !important;
+  border: none !important;
+  outline: none !important;
+}
+body{
+  background-color: var(--paleta-Fundo) !important;
+  overflow-x: hidden !important;
+}
+/*IFRAME*/
+.principal {
+  width: 100%;
+  height: 100%;
+}
+
+.fprincipal {
+  width: 100%;
+  height: 92vh;
+  border: none;
+  display: block;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  margin: 10px;
+}
+
+.tituloGrid {
+  display: contents;
+}
+
+.colunaTituloGrid {
+  font-weight: bold;
+  padding: 10px;
+  text-align: left;
+  background-color: #a8a8a8;
+  border: 1px solid #ccc;
+}
+.dadosGrid,
+.dadosGrid_novosContatosForn,
+.dadosGrid_contatosFornAdd {
+  display: contents;
+  flex-direction: row;
+}
+
+.colunaElementosGrid{
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #f1f1f1;
+  border: 1px solid #ccc;
+  height: 100px;
+  padding: 0px;
+  font-size: 14px;
+}
+@media (max-width: 865px){
+  .colunaElementosGrid{
+    font-size: 10px !important;
+  }
+}
+.popupMensagem {
+  width: 40vw;
+  height: auto;
+  position: fixed;
+  top: 100px; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+  background-color: #e3ffe7;
+  padding: 20px; 
+  border-radius: 3px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.493);
+  text-align: center; 
+  font-family: Arial, sans-serif; 
+  font-size: 16px; 
+  color: #333; 
+  box-sizing: border-box; 
+  display: block;
+  animation: slideInOut 3s ease-in-out forwards;
+}
+.popupMensagem p {
+  font-size: 18px;
+  color: #00000091;
+  font-weight: bolder;
+  border-bottom: 3px solid var(--paleta-Prim); 
+  padding-bottom: 10px; 
+}
+@keyframes slideInOut {
+  0% {
+    top: -100%; /* Inicia fora da tela, acima */
+     display: none;
+  }
+  20% {
+    top: 20%; /* No meio da tela */
+    display: block;
+  }
+  80% {
+    top: 20%; /* Mantém o popup no meio por 3 segundos */
+   display: block;
+  }
+  100% {
+    top: -100%; /* Sobe novamente para fora da tela */
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+
+  .colunaTituloGrid {
+    text-align: center;
+  }
+
+  .dadosGrid > div {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .grid {
+    gap: 5px;
+    font-size: 3vw;
+  }
+
+  .colunaTituloGrid,
+  .dadosGrid > div {
+    padding: 8px;
+  }
+}
+
+#pesquisa{
+  position: fixed;
+}
+.corpooPopup {
+    padding: 5px;
+    background: #f5f5f5;
+    border-radius: 8px;
+}
+
+.corpooPopup .campoForm {
+    margin-bottom: 10px;
+    padding: 10px;
+    background: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+}
+
+.corpooPopup label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Agrupamento dos botões de rádio */
+.corpooPopup .radio-group {
+    display: flex;
+    gap: 15px; /* Espaço entre as divs dos radios */
+}
+
+.radio-group > div {
+    display: flex;
+    align-items: first baseline;
+    gap: 5px; /* Espaço entre o radio e seu label */
+}
+
+.corpooPopup input[type="radio"] {
+    cursor: pointer;
+}
+
+.corpooPopup input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.corpooPopup .rodapeoPopup {
+    text-align: right;
+    margin-top: 10px;
+}
+
+.corpooPopup .btn_comandoPopup {
+    padding: 8px 15px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.corpooPopup .btn_comandoPopup:hover {
+    background: #0056b3;
+}
+
+/* caixa de mensagem */
+.cxmsg_fundo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--paleta-Fundo);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(5px);
+  z-index: 5;
+}
+
+.cxmsg {
+  background: var(--paleta-Branco);
+  width: 320px;
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.titulo_cxmsg {
+  background: var(--paleta-Prim);
+  color: var(--paleta-Branco);
+  padding: 12px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.titulo_cxmsg p {
+  margin: 0;
+}
+
+.btn_fechar_cxmsg {
+  background: none;
+  border: none;
+  color: var(--paleta-Branco);
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn_fechar_cxmsg:hover {
+  color: var(--paleta-Seg);
+}
+
+.corpo_cxmsg {
+  padding: 15px;
+  color: var(--paleta-Cinza);
+  font-size: 16px;
+  text-align: center;
+}
+
+.rodape_cxmsg {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  background: #eee;
+  border-top: 2px solid var(--paleta-Prim);
+}
+
+.btn_cxmsg {
+  background: var(--paleta-Prim);
+  color: var(--paleta-Branco);
+  border: none;
+  padding: 8px 14px;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn_cxmsg:hover {
+  background: var(--paleta-Seg);
+}
+
+/* Animação */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+.ocultarpopupList{
+  display: none !important;
+}
+.ocultarpopupContFone{
+   display: none !important;
+}
+
+
+/*LOGIN*/
+.login-container {
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+h2 {
+    color: var(--paleta-Branco);
+    margin-bottom: 1rem;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+label {
+    color: var(--paleta-Branco);
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+form{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    background-color: var(--paleta-Cinza);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    width: 30%;
+    z-index: 0;
+}
+.input-field {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--paleta-Seg);
+    border-radius: 5px;
+    background-color: var(--paleta-Branco);
+    color: var(--paleta-Cinza);
+    font-size: 1rem;
+
+}
+
+.input-field:focus {
+    border-color: var(--paleta-Prim);
+    outline: none;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--paleta-Prim);
+    color: var(--paleta-Branco);
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.login-btn:hover {
+    background-color: var(--paleta-Seg);
+}
+.popupJanela{
+    position: fixed;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--paleta-Cinza);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    width: 25%;
+}
+.popup {
+  position: absolute;
+  background-color: #00000060;
+  height: 100vh;
+  width: 100vw;
+  z-index: 5;
+}
+.tituloPopup {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--paleta-Seg);
+  border-bottom: 2px solid var(--paleta-Prim);
+  padding-bottom: 0px;
+}
+.emaildiv{
+  padding-top: 10px;
+}
+.tituloPopup p {
+  margin: 0;
+}
+
+.btn_janelaopera {
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: var(--paleta-Prim);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn_janelaopera:hover {
+  color: var(--paleta-Seg);
+}
+/* Links de "Esqueceu a senha?" e "Registrar" */
+.senhaEsquecida,
+.registrar {
+  text-align: center;
+  margin-top: 10px;
+}
+.senhaEsquecida{
+    color: #007BFF!important;
+    text-decoration:underline;
+}
+
+.senhaEsquecida a:hover,
+.registrar a:hover {
+  text-decoration: underline;
+}
+
+.aInicial {
+  font-weight: 600;
+  color: var(--paleta-Prim)!important;
+  cursor: pointer;
+}
+
+.aInicial:hover{
+  text-decoration: underline !important;
+}
+@media (max-width: 480px) {
+    .login-container {
+        padding: 1.5rem;
+    }
+
+    .input-field {
+        font-size: 0.9rem;
+    }
+
+    .login-btn {
+        font-size: 0.9rem;
+    }
+}
+
+

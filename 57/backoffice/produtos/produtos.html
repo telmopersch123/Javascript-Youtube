@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Header</title>
+  <script src="produtos.js" type="module" defer></script>
+  <!-- <script src="../../geral.js" type="module" defer></script> -->
+  <link rel="stylesheet" href="produtos.css">
+  <link rel="stylesheet" href="../../geral.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<body>
+
+  <div id="topoJanela" class="topoJanela">
+    <div></div>
+    <div>Produtos</div>
+    <div>
+      <button title="Cadastro de Novo produto" id="btnAdd"><i class="bi bi-plus-lg iconscol"></i></button>
+      <button id="btnSListarTudo"><i class="bi bi-card-list iconscol"></i></button>
+      <button title="Pesquisar produto" id="btnSearch"><i class="bi bi-search iconscol"></i></button>
+    </div>
+  </div>
+  <div class="filtragem">
+    <div class="campoForm campofiltragem">
+      <label for="">Filtrar por produto</label>
+      <input type="text" id="f_filtragem" name="f_filtragem">
+    </div>
+  </div>
+
+  <!-- POPUPocultarLinhaGrid -->
+  <div id="pesquisa" class="popup ocultarpopuppesq">
+    <div class="JanelaPopup">
+      <div class="tituloPopup">
+        <p id="tituloPopup">Pesquisar</p>
+        <button class="btn_janelaopera" id="btn_fechar0"><i class="bi bi-x-circle"></i></button>
+      </div>
+      <div class="corpooPopup">
+        <div class="campoForm">
+          <label>Tipo da pesquisa</label>
+          <div class="radio-group">
+            <div>
+              <input type="radio" id="f_pesqid_id" name="f_pesqid">
+              <label for="f_pesqid_id">ID</label>
+            </div>
+            <div>
+              <input type="radio" id="f_pesqid_nome" name="f_pesqid">
+              <label for="f_pesqid_nome">Nome</label>
+            </div>
+          </div>
+        </div>
+        <div class="campoForm">
+          <input type="text" id="pesqu" name="pesqu">
+        </div>
+        <div class="rodapeoPopup">
+          <button id="btn_pesquisar" class="btn_comandoPopup">Pesquisar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="novoProduto" class="popup ocultarpopupadd">
+    <div class="JanelaPopup">
+      <div class="tituloPopup">
+        <p id="tituloPopup">Novo Produto</p>
+        <button class="btn_janelaopera" id="btn_fechar1"><i class="bi bi-x-circle"></i></button>
+      </div>
+      <div class="corpooPopup">
+        <div class="campoForm">
+          <label for="">Código Produto</label>
+          <input type="text" id="f_descprod" name="f_nome" required>
+        </div>
+        <div class="campoForm">
+          <label for="">Descrição Produto</label>
+          <input type="text" id="f_descproduto" name="f_descproduto" required>
+        </div>
+        <div class="campoForm">
+          <label for="">Quantidade Produto</label>
+          <input type="number" min="0" id="f_quantColab" name="f_quantColab" value="1" required>
+        </div>
+        <div class="campoForm">
+          <label for="">Tipo Produto</label>
+          <select id="f_tipoProdColab" name="f_tipoProdColab"><!-- valores api --></select>
+        </div>
+        <div class="campoForm">
+          <label for="">Fornecedor</label>
+          <select id="f_fornprod" name="f_fornprod"><!-- valores api --></select>
+        </div>
+        <div class="campoForm">
+          <label for="">Status</label>
+          <select id="f_statusProd" name="f_statusProd">
+            <option value="A">Ativo</option>
+            <option value="I">Inativo</option>
+          </select>
+        </div>
+      </div>
+      <div class="rodapeoPopup">
+        <button id="btn_gravar" class="btn_comandoPopup">Registrar Movimentação</button>
+        <button id="btn_gcancelar" class="btn_comandoPopup">Cancelar</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="movEstoque" class="popup ocultarpopupadd">
+    <div class="JanelaPopup">
+      <div class="tituloPopup">
+        <p id="tituloPopup">Movimentação de Estoque</p>
+        <button class="btn_janelaopera btn_fechar2" id="btn_fechar1"><i class="bi bi-x-circle"></i></button>
+      </div>
+      <div class="corpooPopup">
+        <div class="campoForm">
+          <label for="">Código Produto</label>
+          <input type="number" id="f_descprodMove" name="f_descprodMove" required>
+        </div>
+        <div class="campoForm">
+          <label for="">Descrição</label>
+          <input type="text" id="f_descprodutoMove" name="f_descprodutoMove" required>
+        </div>
+        <div class="campoForm">
+          <label for="">Quantidade</label>
+          <input id="f_quantColabMove" name="f_quantColabMove"><!-- valores api --></input>
+        </div>
+        <div class="campoForm">
+          <label for="">Quantidade a ser registrada</label>
+          <input type="number" value="1" min="0" id="f_quantprodMoveReg"
+            name="f_quantprodMoveReg"><!-- valores api --></input>
+        </div>
+      </div>
+      <div class="rodapeoPopup">
+        <button id="btn_addQtde" class="btn_comandoPopup">Adicionar</button>
+        <button id="btn_removeqtde" class="btn_comandoPopup">Remover</button>
+        <button id="btn_gravarmoveqtde" class="btn_comandoPopup">Gravar</button>
+        <button id="btn_gcancelar" class="btn_comandoPopup btnCancelarEstoquePopUp">Cancelar</button>
+      </div>
+    </div>
+  </div>
+  <!-- CONTEUDO -->
+  <div class="areaGrid" id="areaGrid">
+    <div id="grid" class="grid gridProdutos">
+      <div class="tituloGrid" id="tituloGrid">
+        <div class="colunaTituloGrid c1">Código</div>
+        <!-- <div class="colunaTituloGrid c2">Tipo</div> -->
+        <div class="colunaTituloGrid c3">Descrição</div>
+        <div class="colunaTituloGrid c4">ID Fornecedor</div>
+        <div class="colunaTituloGrid c5">Quantidade</div>
+        <div class="colunaTituloGrid c5">Status</div>
+        <div class="colunaTituloGrid c5">Operações</div>
+      </div>
+      <div class="dadosGrid" id="dadosGrid"><!-- Valor BANCO --></div>
+    </div>
+  </div>
+</body>
+
+</html>
